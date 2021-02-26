@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Wheel of Fortune!</title>
-    <script src="./js/randomWord.js"></script>
-    <script src="./js/index.js"></script>
-
 </head>
 <body>
     
+    <div id="display">
+        Hello
+    </div>
+    <button id='start'>Start</button>
+    <form id= "userInput">
+        <p>Enter 3 constants and 1 vowel</p>
+        <input type="text" id='guess' name ="guess" value="" maxlength="1"/>
+    </form>
+    <form id= 'finalForm'>
+        <p>Enter Your final guess below</p>
+        <input type="text" id='final' name ="final" value=""/>
+    </form>
+    
 </body>
+<script src="./js/randomWord.js"></script>
+<script src="./js/index.js"></script>
 </html>

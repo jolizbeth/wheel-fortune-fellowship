@@ -81,11 +81,13 @@ function isValid(){
     guess.setCustomValidity("")
     console.log("pleasssse work")
   }
-  //console.log(constriant.includes(guessVal))
-  // let finalVal = final.value;
-  // if(constriant.includes(finalVal)){
-  //   final.setCustomValidity("Not valid input, please enter a-z")
-  // }
+  
+  let finalVal = final.value;
+  if(!finalVal.match(constriant)){
+    final.setCustomValidity("Not valid input, please enter a-z")
+  } else{
+    final.setCustomValidity("")
+  }
 }
 
 window.onload = function(){

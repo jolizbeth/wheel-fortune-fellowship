@@ -61,12 +61,34 @@ const finalGuess = function(event){
   let val = final.value
   if(word === val){
     for(let i = 0; i<word.length; i++){
-        underscore[i] = word[i]
+        underscore[i] = word[i] //set win 
     }  
   } else{
-    console.log("wrong")
+    console.log("wrong")  //set loss here 
   }
+  final.disabled = true;
   display.innerText = underscore.join(" ").toUpperCase();
-  
 }
 finalForm.addEventListener('submit', finalGuess);
+
+function isValid(){
+  const constriant = /[a-z]/g
+  
+  let guessVal = guess.value;
+  if(!guessVal.match(constriant)){
+    guess.setCustomValidity("Not valid input, please enter a-z")
+  } else{
+    guess.setCustomValidity("")
+    console.log("pleasssse work")
+  }
+  //console.log(constriant.includes(guessVal))
+  // let finalVal = final.value;
+  // if(constriant.includes(finalVal)){
+  //   final.setCustomValidity("Not valid input, please enter a-z")
+  // }
+}
+
+window.onload = function(){
+  final.onchange = isValid;
+  guess.onchange = isValid;
+}

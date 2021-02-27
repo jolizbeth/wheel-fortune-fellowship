@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Wheel of Fortune!</title>
 </head>
 <body>
-    
-    <div id="display">
-        Hello
+    <div class="container"  id= "game">
+        <div class = "d-flex justify-content-center"  id="display"></div>
+        <div class="d-flex justify-content-center">
+        <button id='start' type="button" class="btn btn-dark">Start</button>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <form class = "form-group d-flex flex-column  justify-content-center" id= "userInput">
+                <p>Enter 3 constanants and 1 vowel</p>
+                <input type="text" id='guess' name ="guess" value="" maxlength="1"/>
+            </form>
+        </div>
+        <div class="d-flex justify-content-center">
+            <form class = "form-group d-flex flex-column  justify-content-center" id='finalForm'>
+                <p>Enter your final guess below</p>
+                <input type="text" id='final' name ="final" value=""/>
+            </form>
+        </div>
     </div>
-    <button id='start'>Start</button>
-    <form id= "userInput">
-        <p>Enter 3 constants and 1 vowel</p>
-        <input type="text" id='guess' name ="guess" value="" maxlength="1"/>
-    </form>
-    <form id= 'finalForm'>
-        <p>Enter Your final guess below</p>
-        <input type="text" id='final' name ="final" value=""/>
-    </form>
-    
 </body>
 <script src="./js/randomWord.js"></script>
 <script src="./js/index.js"></script>

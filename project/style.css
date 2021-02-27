@@ -1,3 +1,6 @@
+.container{
+  margin: 3rem;
+}
 #display{
   font-size: 5rem;
 }

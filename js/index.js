@@ -16,6 +16,10 @@ start.onclick = function showLetters(){
   }
   display.innerText = underscore.join(' ').toUpperCase() //adding the letters to the display
 }
+const restart = document.getElementById('restart');
+restart.onclick = function reloadGame(){
+  window.location.reload();
+}
 
 const vowels = 'aeiou';
 const form = document.getElementById('userInput')

@@ -7,6 +7,10 @@ h1{
 #display{
   font-size: 5rem;
 }
+.btn{
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
 
 #boxTitle{
   margin-top: 2rem;

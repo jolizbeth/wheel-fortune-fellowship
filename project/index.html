@@ -8,22 +8,32 @@
     <title>Wheel of Fortune!</title>
 </head>
 <body>
-    <div class="container"  id= "game">
-        <div class = "d-flex justify-content-center"  id="display"></div>
-        <div class="d-flex justify-content-center">
-        <button id='start' type="button" class="btn btn-dark">Start</button>
-        </div>
-        <div class="container d-flex justify-content-center">
-            <form class = "form-group d-flex flex-column  justify-content-center" id= "userInput">
-                <p>Enter 3 constanants and 1 vowel</p>
-                <input type="text" id='guess' name ="guess" value="" maxlength="1"/>
-            </form>
-        </div>
-        <div class="d-flex justify-content-center">
-            <form class = "form-group d-flex flex-column  justify-content-center" id='finalForm'>
-                <p>Enter your final guess below</p>
-                <input type="text" id='final' name ="final" value=""/>
-            </form>
+    <div class="fill">
+        <div class="container"  id= "game">
+            <h1>Wheel of Fortune</h1>
+            <div class = "d-flex justify-content-center"  id="display"></div>
+            <div class="d-flex justify-content-center">
+                <button id='start' type="button" class="btn btn-dark">Start</button>
+            </div>
+           
+            <div class=" d-flex justify-content-center" id= "boxTitle">
+                <p>Already Guessed</p>
+            </div>
+            <div class="d-flex justify-content-center" id="wordBox">
+            </div>
+           
+            <div class="container d-flex justify-content-center">
+                <form class = "form-group d-flex flex-column  justify-content-center" id= "userInput">
+                    <p>Enter 3 constanants and 1 vowel</p>
+                    <input type="text" class="form-control" id='guess' name ="guess" value="" maxlength="1"/>
+                </form>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form class = "form-group d-flex flex-column justify-content-center" id='finalForm'>
+                    <p>Enter your final guess below</p>
+                    <input type="text" class="form-control" id='final' name ="final" value=""/>
+                </form>
+            </div>
         </div>
     </div>
 </body>

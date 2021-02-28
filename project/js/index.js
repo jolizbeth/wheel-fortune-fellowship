@@ -1,3 +1,4 @@
+const body = document.body;
 let display = document.getElementById('display');
 
 const word = getRandomWord();
@@ -41,6 +42,9 @@ const userGuess = function (event){
       }else{
         guessSoFar.push(val)
       }
+      let wordBox = document.getElementById("wordBox")
+      let text = wordBox.innerText;
+      wordBox.innerText = text + " " +val;
   }
   for(let i = 0; i<word.length; i++){
     if(word[i] === val){
@@ -62,12 +66,14 @@ const finalGuess = function(event){
   if(word === val){
     for(let i = 0; i<word.length; i++){
         underscore[i] = word[i] //set win 
+        body.style.background = "#649868";
     }  
   } else{
-    console.log("wrong")  //set loss here 
+    body.style.background = "#B53737";  //set loss here 
   }
   final.disabled = true;
   display.innerText = underscore.join(" ").toUpperCase();
+  finalForm.reset()
 }
 finalForm.addEventListener('submit', finalGuess);
 

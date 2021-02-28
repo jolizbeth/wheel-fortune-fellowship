@@ -1,6 +1,14 @@
+h1{
+  text-align: center;
+}
 .container{
-  margin: 3rem;
+  margin: 2rem;
 }
 #display{
   font-size: 5rem;
+}
+
+#boxTitle{
+  margin-top: 2rem;
+  text-decoration: underline;
 }
